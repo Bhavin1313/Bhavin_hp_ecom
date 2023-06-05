@@ -13,6 +13,8 @@ class _HomePageState extends State<HomePage> {
   Color mycolor = Colors.black;
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -53,8 +55,8 @@ class _HomePageState extends State<HomePage> {
                   ...AllProducts.map(
                     (e) => Container(
                       margin: EdgeInsets.only(left: 20, top: 20, bottom: 20),
-                      height: 300,
-                      width: 200,
+                      height: h * 0.392,
+                      width: w * 0.495,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           boxShadow: [
@@ -81,6 +83,9 @@ class _HomePageState extends State<HomePage> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
+                              // child: Image.network(
+                              //   "https://media.licdn.com/dms/image/C5603AQFlTT8xZqtK0w/profile-displayphoto-shrink_800_800/0/1620211968028?e=2147483647&v=beta&t=X2TyH4NVL0DtEGNvdnVNOBE_fvP8zFS_bcyefWa9lmg",
+                              // ),
                             ),
                           ),
                           Expanded(
@@ -135,6 +140,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            // ),
+            // Center(
+            //   child: CircleAvatar(
+            //     radius: 300,
+            //     backgroundColor: Colors.red,
+            //     // backgroundImage: AssetImage("lib/Assets/Images/babu1.jpg")
+            //     child: Image.asset(
+            //       "lib/Assets/Images/dora.jpg",
+            //     ),
+            //   ),
           ],
         ),
       ),
